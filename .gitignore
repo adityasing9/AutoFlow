@@ -10,6 +10,7 @@ venv/
 autoflow.db
 chroma_db/
 .pytest_cache/
+screenshots/
 
 # Node
 node_modules/
