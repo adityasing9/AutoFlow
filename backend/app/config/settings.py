@@ -5,13 +5,17 @@ from pydantic_settings import BaseSettings
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DEFAULT_WORKSPACE = (BASE_DIR.parent / "AutoFlowWorkspace").resolve()
 
+is_vercel = bool(os.getenv("VERCEL"))
+tmp_dir = Path("/tmp") if is_vercel else Path(".")
+default_db_url = f"sqlite:///{(tmp_dir / 'autoflow.db').as_posix()}"
+
 class Settings(BaseSettings):
     PROJECT_NAME: str = "AutoFlow"
     API_V1_STR: str = "/api"
     
     # Database Settings: Supports MySQL with automatic SQLite fallback
-    # To connect to MySQL: mysql+pymysql://<user>:<password>@localhost:3306/autoflow
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./autoflow.db")
+    # In Vercel serverless environment, use /tmp/autoflow.db for writable SQLite
+    DATABASE_URL: str = os.getenv("DATABASE_URL", default_db_url)
     MYSQL_HOST: str = os.getenv("MYSQL_HOST", "localhost")
     MYSQL_PORT: int = int(os.getenv("MYSQL_PORT", "3306"))
     MYSQL_USER: str = os.getenv("MYSQL_USER", "root")
@@ -19,7 +23,7 @@ class Settings(BaseSettings):
     MYSQL_DATABASE: str = os.getenv("MYSQL_DATABASE", "autoflow")
     
     # Safe Workspace Sandbox
-    WORKSPACE_DIR: str = os.getenv("WORKSPACE_DIR", str(DEFAULT_WORKSPACE))
+    WORKSPACE_DIR: str = os.getenv("WORKSPACE_DIR", str(tmp_dir / "AutoFlowWorkspace" if is_vercel else DEFAULT_WORKSPACE))
     
     # Privacy & Local AI
     OFFLINE_MODE: bool = True
@@ -40,7 +44,7 @@ class Settings(BaseSettings):
     PATTERN_CONFIDENCE_THRESHOLD: float = 0.60
     
     # ChromaDB Vector Memory Path
-    CHROMA_PERSIST_DIR: str = str(BASE_DIR / "chroma_db")
+    CHROMA_PERSIST_DIR: str = str(tmp_dir / "chroma_db" if is_vercel else (BASE_DIR / "chroma_db"))
 
     class Config:
         env_file = ".env"
