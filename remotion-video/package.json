@@ -1,0 +1,20 @@
+{
+  "name": "autoflow-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/index.jsx",
+    "build": "remotion render src/index.jsx AutoFlowVideo out/autoflow-demo.mp4",
+    "render": "remotion render src/index.jsx AutoFlowVideo out/autoflow-demo.mp4 --gl=angle",
+    "still": "remotion still src/index.jsx AutoFlowVideo out/preview.png --frame=100"
+  },
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.267"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.267"
+  }
+}

@@ -164,5 +164,26 @@ AutoFlow is pre-configured with the primary evaluation scenario:
 
 ---
 
+## 🎥 Remotion Video Showcase
+
+A programmatic promotional and technical walkthrough video was built using [Remotion](https://remotion.dev) (React-based video framework) inside `remotion-video/`.
+
+- **Resolution:** 1080p Full HD (1920x1080, 30 FPS)
+- **Duration:** 38 seconds
+- **Features:** Dark cybernetic theme, dynamic stage-tracking header, animated comparison cards, sequence flow charts, and real embedded application screenshots.
+
+### Preview or Render the Video:
+```pwsh
+# 1. Launch interactive Remotion Studio
+cd remotion-video
+npm run dev
+
+# 2. Render to MP4
+npm run build
+```
+Rendered video output is saved to `remotion-video/out/autoflow-demo.mp4`.
+
+---
+
 ## 📄 License
 MIT License. Designed for privacy-preserving, local-first workflow discovery and automation.
