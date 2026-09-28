@@ -1,9 +1,11 @@
 # AutoFlow: AI-Powered Workflow Discovery & Privacy-Preserving Automation
 
 [![Deploy on Vercel](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://autoflow-three-pearl.vercel.app)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-Remotion%20(1080p)-0ea5e9?style=for-the-badge&logo=react)](remotion-video/out/autoflow-demo.mp4)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/adityasing9/AutoFlow)
 
 > **Live Dashboard Demo**: [https://autoflow-three-pearl.vercel.app](https://autoflow-three-pearl.vercel.app)  
+> 🎬 **38s Demo Video (1080p MP4)**: [remotion-video/out/autoflow-demo.mp4](remotion-video/out/autoflow-demo.mp4)  
 > *"Instead of requiring users to manually create automation workflows, AutoFlow discovers repetitive workflows from permitted user activity and proposes useful automations."*
 
 ---
