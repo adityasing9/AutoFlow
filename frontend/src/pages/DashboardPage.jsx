@@ -41,7 +41,7 @@ export default function DashboardPage({ stats, onNavigate, onRefresh, onSimulate
           <div className="space-y-1.5">
             <div className="flex items-center space-x-2">
               <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                BE AIML Mini-Project Demonstration
+                Autonomous Workflow Discovery Engine
               </span>
               <span className="text-xs text-slate-400 font-mono">Autonomous Workflow Discovery</span>
             </div>

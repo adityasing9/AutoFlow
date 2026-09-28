@@ -1,6 +1,5 @@
 # AutoFlow: AI-Powered Workflow Discovery & Privacy-Preserving Automation
 
-> **Academic Mini-Project (B.E. AIML)**  
 > *"Instead of requiring users to manually create automation workflows, AutoFlow discovers repetitive workflows from permitted user activity and proposes useful automations."*
 
 ---
@@ -161,5 +160,5 @@ AutoFlow is pre-configured with the primary evaluation scenario:
 
 ---
 
-## 📄 License & Academic Integrity
-Developed as a 3-credit college mini-project for Bachelor of Engineering in AIML. Designed for educational, privacy-preserving, and academic evaluation purposes.
+## 📄 License
+MIT License. Designed for privacy-preserving, local-first workflow discovery and automation.
